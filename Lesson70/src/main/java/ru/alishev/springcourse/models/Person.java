@@ -4,16 +4,10 @@ package ru.alishev.springcourse.models;
  * @author Neil Alishev
  */
 
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
-import java.util.Date;
 import java.util.List;
 
 /** это человек у человека есть id уникальный идентификатор   */

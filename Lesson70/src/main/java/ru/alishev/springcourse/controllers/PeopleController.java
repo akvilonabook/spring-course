@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import ru.alishev.springcourse.models.Person;
 import ru.alishev.springcourse.services.PeopleService;
 import ru.alishev.springcourse.util.PersonValidator;
-
 import javax.validation.Valid;
 
 /**
