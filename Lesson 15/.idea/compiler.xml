@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Lesson 11" />
+        <module name="Lesson 13" />
+        <module name="spring-app1" />
+        <module name="Lesson 14" />
+        <module name="Lesson 15" />
+        <module name="Lesson 10" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

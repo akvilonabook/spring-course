@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Назначить администратора</title>
+</head>
+<body>
+    <!-- выпадающий список лежит внутри формы и обрабатывается th:method="PATCH" контроллером
+    AdminController  @PatchMapping -->
+    <form th:method="PATCH"
+          th:action="@{/admin/add}">
+
+        <!-- у выпадающего списка есть label в котором написано "Выберите человека:" -->
+        <label for="person">Выберите человека:</label>
+
+        <!-- внутри формы лежит сам SELECT выпадающий список -->
+        <!-- th:object="person" указывает на AdminController -> @ModelAttribute("person") Person person -->
+        <!-- th:field="*{id}" указывает то поле, которое будет выбираться в этом
+        выпадающем списке и лежать в атрибуте value -->
+        <select th:object="${person}"
+                th:field="*{id}" id="person">
+
+            <!--<option></option> должны создаваться динамически с помощью thymeleaf поэтому используется
+            атрибут th:each="....      на сервер будет отправляться th:value="${person.getId} -->
+            <!-- th:text= указываем текст, который будет отображаться  -->
+            <option th:each="person : ${people}"
+                    th:value="${person.getId()}"
+                    th:text="${person.getName()}">
+            </option>
+        </select>
+        <!-- создаем кнопку submit, где будут данные с этой формы -->
+        <input type="submit" value="Назначить админом"/>
+
+    </form>
+
+</body>
+</html>
